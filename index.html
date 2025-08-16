@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo">MyStore</a>
+        <ul class="nav-links">
+          <li><a href="../Pages/homePage.html">Home</a></li>
+          <li><a href="../Products/Products.html">Products</a></li>
+          <li><a href="../Cart/Cart.html">Cart</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <h1>Product Details</h1>
+
+    <div class="detail">
+      <a href="./Pages/homePage.html"> Back to Products</a>
+
+      <div class="content">
+        <img id="productImage" src="" alt="Product Image" />
+        <div class="details">
+          <h2 id="productTitle">Product Title</h2>
+          <p id="productDescription">Product description goes here.</p>
+          <p>
+            <strong>Category:</strong>
+            <span id="productCategory">Category Name</span>
+          </p>
+          <p><strong>Price:</strong> $<span id="productPrice">0.00</span></p>
+          <button id="addToCartBtn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./detail.js"></script>
+  </body>
+</html>

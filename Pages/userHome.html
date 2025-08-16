@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Home</title>
+  <link rel="stylesheet" href="../Style/userHome.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+</head>
+
+<body>
+  <header>
+    <h1><span>L</span>ogo</h1>
+    <nav class="nav-bar">
+      <a href="#">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="#categories">Categories</a>
+    </nav>
+    <div class="user-info">
+      <button class="sign-up" onclick="goToPage()">Logout</button>
+      <h2 id="userInitials"></h2>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>
+        <span class="span">Sh</span><span class="span">op</span>
+        <span class="span">th</span><span class="span">e</span>
+        <span class="span">La</span><span class="span">te</span><span class="span">st</span>
+      </h1>
+      <button id="shop-now">Shop Now</button>
+    </div>
+    <div class="hero-image">
+      <img src="../images/hero.png" alt="Hero Image" />
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="categories">
+    <h1>Categories</h1>
+    <div class="cards">
+      <div class="cardHover">
+        <div class="card">
+          <img src="../images/men.jpg" alt="Men Category" />
+          <h2>Men</h2>
+          <button class="card-button">Shop Now</button>
+        </div>
+      </div>
+      
+      <div class="cardHover">
+        <div class="card">
+          <img src="../images/women.jpg" alt="Women Category" />
+          <h2>Women</h2>
+          <button class="card-button">Shop Now</button>
+        </div>
+      </div>
+
+      <div class="cardHover">
+        <div class="card">
+          <img src="../images/kid.jpg" alt="Children Category" />
+          <h2>Boy</h2>
+          <button class="card-button">Shop Now</button>
+        </div>
+      </div>
+      <div class="cardHover">
+        <div class="card">
+          <img src="../images/kid-girl.jpg" alt="Children Category" />
+          <h2>Girl</h2>
+          <button class="card-button">Shop Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- discounts -->
+  <section class="discounts">
+    <div class="ad-card" role="region" aria-label="50% Discount Ad">
+      <div class="left">
+        <div class="badge">Limited Offer</div>
+        <div style="text-align: center">
+          <div style="font-size: 20px">Discount</div>
+          <div style="font-size: 28px">50%</div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="title">Huge Discount for a Limited Time</div>
+        <div class="desc">
+          Get 50% off on all selected products — offer valid while stocks
+          last.
+        </div>
+
+        <div class="cta-row">
+          <div class="price">
+            <span class="old-price">$1200</span>
+            <span>$600</span>
+          </div>
+
+          <button class="buy-btn" onclick="handleCTA()">Order Now</button>
+        </div>
+      </div>
+
+      <div class="sticker" aria-hidden="true">
+        50%<small style="
+              display: block;
+              font-size: 11px;
+              margin-top: 2px;
+              opacity: 0.85;
+            ">OFF</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">about us</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>online shop</h4>
+          <ul>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">Children</a></li>
+            <li><a href="#">New Collection</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact US</h4>
+          <div class="form-container">
+            <form class="form">
+              <div class="form-group">
+                <label for="email">Your Email</label>
+                <input required="" name="email" id="email" type="text" />
+              </div>
+              <div class="form-group">
+                <label for="textarea">How Can We Help You?</label>
+                <textarea required="" cols="50" rows="10" id="textarea" name="textarea">
+                  </textarea>
+              </div>
+              <button type="submit" class="form-submit-btn">Send</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function goToPage() {
+      window.location.href = "homePage.html";
+    }
+
+    const nameStored = localStorage.getItem("displayName") || "??";
+    const initials = nameStored.slice(0, 2).toUpperCase();
+    document.getElementById("userInitials").textContent = initials;
+
+    function handleCTA() {
+      const btn = event.currentTarget;
+      btn.disabled = true;
+      btn.textContent = "Redirecting...";
+      setTimeout(() => {
+        btn.textContent = "Order Placed ✓";
+        btn.style.opacity = "0.95";
+      }, 900);
+    }
+  </script>
+</body>
+
+</html>

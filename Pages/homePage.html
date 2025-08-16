@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../Style/home.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <!-- e-commerce website -->
+      <h1><span>L</span>ogo</h1>
+      <nav class="nav-bar">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="../Cart/Cart.html">Cart</a>
+        <a href="../Products/Products.html">Products</a>
+      </nav>
+      <button class="sign-up" onclick="goToPage()">Sign Up</button>
+    </header>
+
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <h1>
+          <span class="span1">Sh</span><span class="span">op</span>
+          <span class="span1">th</span><span class="span">e</span>
+          <span class="span1">La</span><span class="span">te</span
+          ><span class="span1">st</span>
+        </h1>
+        <button id="shop-now">Shop Now</button>
+      </div>
+      <img class="hero-image" src="../images/hero.png" alt="Hero Image" />
+    </section>
+
+    <section id="about" class="about">
+      <h2>About Us</h2>
+      <p>
+        Welcome to our E-Commerce platform — your one-stop destination for a
+        seamless and secure online shopping experience. We offer a wide range of
+        high-quality products, from electronics and fashion to home essentials,
+        all available at competitive prices.
+      </p>
+      <p>
+        Our platform is designed to be fast, user-friendly, and responsive
+        across all devices. Customers can easily browse products, search by
+        categories, add items to their cart or wishlist, and complete purchases
+        using secure payment options.
+      </p>
+      <p>
+        We are committed to providing excellent customer service, fast shipping,
+        and a smooth shopping journey from start to finish. Whether you're
+        shopping for daily needs or special gifts, we've got you covered.
+      </p>
+    </section>
+
+    <!-- footer -->
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">about us</a></li>
+              <li><a href="#">Categories</a></li>
+              <li><a href="#">privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>online shop</h4>
+            <ul>
+              <li><a href="#">Men</a></li>
+              <li><a href="#">Women</a></li>
+              <li><a href="#">Children</a></li>
+              <li><a href="#">New Collection</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact US</h4>
+            <div class="form-container">
+              <form class="form">
+                <div class="form-group">
+                  <label for="email">Your Email</label>
+                  <input required="" name="email" id="email" type="text" />
+                </div>
+                <div class="form-group">
+                  <label for="textarea">How Can We Help You?</label>
+                  <textarea
+                    required=""
+                    cols="50"
+                    rows="10"
+                    id="textarea"
+                    name="textarea"
+                  >
+                  </textarea>
+                </div>
+                <button type="submit" class="form-submit-btn">Send</button>
+              </form>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>follow us</h4>
+            <div id="contact" class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+      function goToPage() {
+        window.location.href = "signUp.html"; // to the sign-up page
+      }
+    </script>
+  </body>
+</html>
