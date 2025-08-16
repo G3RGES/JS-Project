@@ -50,7 +50,7 @@ function renderProducts(products) {
 
     // View Details button
     card.querySelector(".details-btn").onclick = function () {
-      window.location.href = `../index.html?id=${product.id}`;
+      window.location.href = `../ProductDetails/index.html?id=${product.id}`;
     };
 
     container.appendChild(card);
