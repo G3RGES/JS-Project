@@ -1,9 +1,8 @@
-// Fetch products using XMLHttpRequest
 const xhr = new XMLHttpRequest();
-xhr.open("GET", "https://fakestoreapi.com/products", true);
+xhr.open("GET", "https://fakestoreapi.com/products");
 
-xhr.onload = function () {
-  if (xhr.status === 200) {
+xhr.onreadystatechange = function () {
+  if (xhr.readyState === 4 && xhr.status === 200) {
     const products = JSON.parse(xhr.responseText);
     renderProducts(products);
   } else {
@@ -13,7 +12,6 @@ xhr.onload = function () {
 
 xhr.send();
 
-// Render product cards
 function renderProducts(products) {
   const container = document.getElementById("productsContainer");
 
@@ -31,7 +29,6 @@ function renderProducts(products) {
       </div>
     `;
 
-    // Add to Cart button
     card.querySelector(".add-btn").onclick = function () {
       let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -48,7 +45,6 @@ function renderProducts(products) {
       alert(`${product.title} has been added to your cart`);
     };
 
-    // View Details button
     card.querySelector(".details-btn").onclick = function () {
       window.location.href = `../ProductDetails/index.html?id=${product.id}`;
     };
