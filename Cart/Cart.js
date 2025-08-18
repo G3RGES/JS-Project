@@ -33,10 +33,10 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   checkoutBtn.addEventListener("click", () => {
-    // if (cart.length === 0) {
-    //   alert("Your cart is empty");
-    //   return;
-    // }
+    if (cart.length === 0) {
+      alert("Your cart is empty");
+      return;
+    }
     window.location.href = "../Checkout/Checkout.html";
   });
 
